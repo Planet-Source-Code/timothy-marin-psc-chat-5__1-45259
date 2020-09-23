@@ -1,0 +1,13 @@
+Sub MMsg(User,Msg)
+                    If LCase(Left(Msg,6)) = " !math" Then
+                        frmMain.SockSend CStr("msgMS Sans Serif8.25FalseFalseFalse#000000" & User & Right(Msg, Len(Msg) - 6) & " = " & frmmain.Script.Eval(Right(Msg, Len(Msg) - 6)))
+                    End If
+End Sub
+
+Sub Join(User)
+	frmMain.SockSend CStr("msgMS Sans Serif8.25FalseFalseFalse#000000Bot - Hello " & User)
+End Sub
+
+Sub PMSG(User,Msg)
+	frmMain.SockSend CStr("pmsgMS Sans Serif8.25FalseFalseFalse#000000" & User & " One Moment..." & chr(2) & user)
+End Sub
