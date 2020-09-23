@@ -1,0 +1,11 @@
+Sub MMsg(User,Msg)
+                    If LCase(Left(Msg,6)) = " !math" Then
+                        frmMain.SockSend CStr("msgMS Sans Serif8.25FalseFalseFalse#000000" & Time & " Easy " & User & " the anser is " & frmmain.Script.Eval(Right(Msg, Len(Msg) - 6)))
+                    End If
+End Sub
+
+Sub Join(User)
+End Sub
+
+Sub PMSG(User,Msg)
+End Sub
